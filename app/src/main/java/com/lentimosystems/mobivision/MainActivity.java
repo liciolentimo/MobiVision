@@ -63,18 +63,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_text_to_speech.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String data = txt_image.getText().toString();
-                if (data.isEmpty()){
-                    Toast.makeText(MainActivity.this, "No clear text recognized", Toast.LENGTH_SHORT).show();
-                } else {
-                    float speed = (float) mSeekBar.getProgress() / 50;
-                    if (speed < 0.1) speed = 0.1f;
-                    mTextToSpeech.setSpeechRate(speed);
-                    mTextToSpeech.speak(data,TextToSpeech.QUEUE_FLUSH,null);
-                }
+        btn_text_to_speech.setOnClickListener(view -> {
+            String data = txt_image.getText().toString();
+            if (data.isEmpty()){
+                Toast.makeText(MainActivity.this, "No clear text recognized", Toast.LENGTH_SHORT).show();
+            } else {
+                float speed = (float) mSeekBar.getProgress() / 50;
+                if (speed < 0.1) speed = 0.1f;
+                mTextToSpeech.setSpeechRate(speed);
+                mTextToSpeech.speak(data,TextToSpeech.QUEUE_FLUSH,null);
             }
         });
     }
