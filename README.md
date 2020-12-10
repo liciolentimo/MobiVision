@@ -2,6 +2,8 @@
 
 A simple Android app that demonstrates text recognition from image using Firebase ML Kit. More additions include text-to-speech.
 
+![demo](https://github.com/liciolentimo/MobiVision/blob/master/videogif.gif)
+
  ## Getting started
  
  There are a few ways to open this project.
